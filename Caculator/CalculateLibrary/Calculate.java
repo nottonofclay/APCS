@@ -22,37 +22,69 @@ public class Calculate
     	return ((inputOne + inputTwo + inputThree) / 3);
     }
 
-    public static double toDegrees(double input)
+    public static double toDegrees(double radians)
     {
-    	return (input * (57.2958279088));
+    	return (radians * (57.2958279088));
     }
 
-    public static double toRadians(double input){
-    	return (input * (0.01745327777));
+    public static double toRadians(double degress){
+    	return (degress * (0.01745327777));
     }
 
-    public static double discriminant(double inputOne, double inputTwo, double inputThree)
+    public static double discriminant(double a, double b, double c)
     {
-    	return ((inputTwo * inputTwo) - (4 * inputOne * inputThree));
+    	return ((b * b) - (4 * a * c));
     }
 
-    public static String toImproperFrac(int inputOne, int inputTwo, int inputThree) 
+    public static String toImproperFrac(int wholeNum, int numerator, int denominator) 
     {
-    	return (((inputOne * inputThree) + inputTwo) + "/" + inputThree);
+    	return (((wholeNum * denominator) + numerator) + "/" + denominator);
     }
 
-    public static String toMixedNum(int inputOne, int inputTwo) 
+    public static String toMixedNum(int numerator, int denominator) 
     {
-    	return ((inputOne / inputTwo) + "_" + (inputOne % inputTwo) + "/" + inputTwo);
+    	return ((numerator / denominator) + "_" + (numerator % denominator) + "/" + denominator);
     }
 
     public static String foil(int inputOne, int inputTwo, int inputThree, int inputFour, String variable) 
     {
-    	return((inputOne * inputThree) + "n^2 + " + ((inputOne * inputFour) + (inputTwo * inputThree)) + "n + " + (inputTwo * inputFour));
+    	return ((inputOne * inputThree) + variable + "^2 + " + ((inputOne * inputFour) + (inputTwo * inputThree)) + "n + " + (inputTwo * inputFour));
     }
     public static boolean isDivisibleBy(int inputOne, int inputTwo) 
     {
-    	return((inputOne % inputTwo) == 0);
+    	return ((inputOne % inputTwo) == 0);
     }
-    
+    public static double absValue(double inputOne)
+    {
+    	if(inputOne < 0) 
+    	{
+    		inputOne *= -1;
+    	}
+    		return inputOne;
+    }
+
+    public static double max(double inputOne, double inputTwo) 
+    {
+    	double output = inputOne;
+    	if(inputTwo > inputOne) 
+    	{
+    		output = inputTwo;
+    	}
+    	return output;		
+    }
+
+    public static double min(double inputOne, double inputTwo) 
+    {
+    	double output = inputOne;
+    	if(inputTwo < inputOne)
+    	{
+    		output = inputTwo;
+    	}
+    	return output;
+    }
+
+    public static double round2(double inputOne)
+    {
+    	return 0; //("%2f", inputOne);
+    }
 }
