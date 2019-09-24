@@ -1,6 +1,6 @@
 package CalculateLibrary;
 
-public class Calculate 
+public class Calculate
 {
     //squares the input
     public static int square(int input)
@@ -18,7 +18,7 @@ public class Calculate
     public static double average(double inputOne, double inputTwo)
     {
     	return (inputOne + inputTwo) / 2;
-    }    
+    }
 
     //find average for three doubles
     public static double average(double inputOne, double inputTwo, double inputThree)
@@ -44,26 +44,26 @@ public class Calculate
     }
 
     //converts mixed numbers to improper fractions
-    public static String toImproperFrac(int wholeNum, int numerator, int denominator) 
+    public static String toImproperFrac(int wholeNum, int numerator, int denominator)
     {
     	return (((wholeNum * denominator) + numerator) + "/" + denominator);
     }
 
     //converts improper fractions to mixed numbers
-    public static String toMixedNum(int numerator, int denominator) 
+    public static String toMixedNum(int numerator, int denominator)
     {
     	return ((numerator / denominator) + "_" + (numerator % denominator) + "/" + denominator);
     }
 
     //foils numbers
-    public static String foil(int inputOne, int inputTwo, int inputThree, int inputFour, String variable) 
+    public static String foil(int inputOne, int inputTwo, int inputThree, int inputFour, String variable)
     {
-    	return ((inputOne * inputThree) + variable + "^2 + " + ((inputOne * inputFour) + 
+    	return ((inputOne * inputThree) + variable + "^2 + " + ((inputOne * inputFour) +
             (inputTwo * inputThree)) + "n + " + (inputTwo * inputFour));
     }
 
     //finds if the first number is divisible by the second
-    public static boolean isDivisibleBy(int inputOne, int inputTwo) 
+    public static boolean isDivisibleBy(int inputOne, int inputTwo)
     {
     	return ((inputOne % inputTwo) == 0);
     }
@@ -71,18 +71,18 @@ public class Calculate
     //finds absolute value of the number given
     public static double absValue(double inputOne)
     {
-    	if(inputOne < 0) 
+    	if(inputOne < 0)
     		inputOne *= -1;
     	return inputOne;
     }
 
     //finds maximum of two numbers
-    public static double max(double inputOne, double inputTwo) 
+    public static double max(double inputOne, double inputTwo)
     {
     	double output = inputOne;
     	if(inputTwo > inputOne)
     		output = inputTwo;
-    	return output;		
+    	return output;
     }
 
     //finds maximum of three numbers
@@ -97,7 +97,7 @@ public class Calculate
     }
 
     //finds minimum of two numbers
-    public static int min(int inputOne, int inputTwo) 
+    public static int min(int inputOne, int inputTwo)
     {
         int output = inputOne;
     	if (inputTwo < inputOne)
@@ -108,7 +108,7 @@ public class Calculate
     //rounds a double to 2 decimal places
     public static double round2(double inputOne)
     {
-        if (((int) (inputOne * 1000)) %  10 >= 5) 
+        if (((int) (inputOne * 1000)) %  10 >= 5)
         {
             inputOne += 0.01;
         }
@@ -117,24 +117,32 @@ public class Calculate
     }
 
     //put the first input to the power of the second
-    public static double exponent(double inputOne, int inputTwo)
+    public static double exponent(double base, int power)
     {
-        double multiplier = inputOne;
-        while (inputTwo > 0)
+        if (power == 0)
         {
-            inputOne *= multiplier;
-            inputTwo--;
+            throw new IllegalArgumentException("exponent is equal to 0");
         }
-        return inputOne;
-        
+        if (power < 0)
+        {
+            throw new IllegalArgumentException("exponent is smaller than 0");
+        }
+        double multiplier = base;
+        while (power > 0)
+        {
+            base *= multiplier;
+            power--;
+        }
+        return base;
+
     }
 
     //fatorials the input
-    public static double factorial(int inputOne) 
+    public static double factorial(int inputOne)
     {
         for(int counter = inputOne - 1; counter > 0; counter--)
         {
-            inputOne *= counter; 
+            inputOne *= counter;
         }
         return inputOne;
     }
@@ -170,7 +178,7 @@ public class Calculate
     //finds square root of the numbre things
     public static double sqrt(double squareRoot)
     {
-        double originalNum = squareRoot; 
+        double originalNum = squareRoot;
         double attempt = squareRoot / 2;
         while (true)
         {
@@ -180,6 +188,22 @@ public class Calculate
                 return round2(squareRoot);
             }
             attempt = squareRoot;
-        }   
-    } 
+        }
+    }
+
+    public static String quadForm(int a, int b, int c)
+    {
+        if ((b * b + (4 * a * c))  < 0)
+        {
+            return ("no real roots");
+        }
+        else if((b * b + (4 * a * c)) == 0)
+        {
+             return ("1 real root");
+        }
+        else 
+        {
+            return ("dos real roots");
+        }
+    }
 }
