@@ -65,6 +65,8 @@ public class Calculate
     //finds if the first number is divisible by the second
     public static boolean isDivisibleBy(int inputOne, int inputTwo)
     {
+        // if (inputOne || inputTwo == 0)
+        //     throw new IllegalArgumentException("cannot divide by zero");
     	return ((inputOne % inputTwo) == 0);
     }
 
@@ -119,6 +121,7 @@ public class Calculate
     //put the first input to the power of the second
     public static double exponent(double base, int power)
     {
+        //throwing exception thingy
         if (power == 0)
         {
             throw new IllegalArgumentException("exponent is equal to 0");
@@ -140,6 +143,10 @@ public class Calculate
     //fatorials the input
     public static double factorial(int inputOne)
     {
+        if (inputOne < 0)
+        {
+            throw new IllegalArgumentException("input is smaller than 0");
+        }
         for(int counter = inputOne - 1; counter > 0; counter--)
         {
             inputOne *= counter;
@@ -178,6 +185,10 @@ public class Calculate
     //finds square root of the numbre things
     public static double sqrt(double squareRoot)
     {
+        if (squareRoot < 0)
+        {
+            throw new IllegalArgumentException("exponent is smaller than 0");
+        }
         double originalNum = squareRoot;
         double attempt = squareRoot / 2;
         while (true)
@@ -193,17 +204,17 @@ public class Calculate
 
     public static String quadForm(int a, int b, int c)
     {
-        if ((b * b + (4 * a * c))  < 0)
+        double dis = discriminant((double) a, (double) b, (double) c);
+        if (dis  < 0)
         {
             return ("no real roots");
         }
-        else if((b * b + (4 * a * c)) == 0)
+        double root1 = round2((-b + sqrt(b*b + 4*a*c)) / 2*a);
+        if(dis == 0)
         {
-             return ("1 real root");
+            return root1 + "";
         }
-        else 
-        {
-            return ("dos real roots");
-        }
+        double root2 = round2(((b + sqrt(b*b + 4*a*c)) / 2*a));
+        return root1 + " and " + root2;
     }
 }
