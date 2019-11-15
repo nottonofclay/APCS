@@ -205,7 +205,7 @@ public class Calculate {
     //returns the roots, if no roots, returns with no real roots
     public static String quadForm(int a, int b, int c)
     {
-        double dis = discriminant((double) a, (double) b, (double) c);
+        double dis = discriminant(a, b, c);
         if (dis  < 0)
         {
             return ("no real roots");

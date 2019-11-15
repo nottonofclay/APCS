@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6438638-5da0-493d-9411-4d0e6fc831c1" name="Default Changelist" comment="" />
+    <list default="true" id="f6438638-5da0-493d-9411-4d0e6fc831c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalcTestALL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalcTestCheckpoint1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalcTestCheckpoint2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalcTestCheckpoint3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FracCalc/fracCalc/FracCalcTestFinal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/Hourglass thing.eml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/Hourglass thing.userlibraries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/out/production/Hourglass thing/META-INF/Hourglass thing.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hourglass thing/src/HourGlass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +33,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1RbywkD7hBcARGDh0vEKrymSiJD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -65,10 +81,34 @@
       <workItem from="1569950335307" duration="2958000" />
       <workItem from="1570121756296" duration="236000" />
       <workItem from="1570122125443" duration="1380000" />
+      <workItem from="1572577287813" duration="38000" />
     </task>
+    <task id="LOCAL-00001" summary="basically finished">
+      <created>1572577311796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572577311796</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="basically finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="basically finished" />
   </component>
 </project>
