@@ -1,4 +1,7 @@
-package fracCalc;
+//Clayton Lau
+//December 19, 2019
+//APCS 3rd
+//package fracCalc;
 import java.util.*;
 
 public class FracCalc {
